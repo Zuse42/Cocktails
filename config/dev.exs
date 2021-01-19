@@ -4,7 +4,7 @@ use Mix.Config
 config :video, Video.Repo,
   username: "postgres",
   password: "postgres",
-  database: "video_dev",
+  database: "cocktail_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10

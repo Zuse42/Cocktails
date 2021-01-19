@@ -5,7 +5,7 @@ db_host = System.get_env("DB_HOST") ||
   enviroment variable DATABASE_HOST is missing.
   """
 
-db_instance = System.get_env("DB_INSTANCE") || "video_dev"
+db_instance = System.get_env("DB_INSTANCE") || "cocktail_dev"
 db_user = System.get_env("DB_USER") || "postgres"
 db_password = System.get_env("DB_PASSWORD") || "postgres"
 db_url = "ecto://#{db_user}:#{db_password}@#{db_host}/#{db_instance}"
