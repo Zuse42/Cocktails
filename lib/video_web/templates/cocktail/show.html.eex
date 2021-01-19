@@ -1,0 +1,18 @@
+<h1>Show Cocktail</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @cocktail.name %>
+  </li>
+
+  <li>
+    <strong>Recipe:</strong>
+    <%= @cocktail.recipe %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.cocktail_path(@conn, :edit, @cocktail) %></span>
+<span><%= link "Back", to: Routes.cocktail_path(@conn, :index) %></span>

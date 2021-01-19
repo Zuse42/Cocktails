@@ -16,8 +16,9 @@ defmodule VideoWeb.Router do
 
   scope "/", VideoWeb do
     pipe_through :browser
+    resources "/cocktails", CocktailController
 
-    live "/", PageLive, :index
+#    live "/", PageLive, :index
   end
 
   # Other scopes may use custom stacks.

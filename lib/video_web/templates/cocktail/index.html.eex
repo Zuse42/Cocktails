@@ -1,0 +1,28 @@
+<h1>Listing Cocktails</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Recipe</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for cocktail <- @cocktails do %>
+    <tr>
+      <td><%= cocktail.name %></td>
+      <td><%= cocktail.recipe %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.cocktail_path(@conn, :show, cocktail) %></span>
+        <span><%= link "Edit", to: Routes.cocktail_path(@conn, :edit, cocktail) %></span>
+        <span><%= link "Delete", to: Routes.cocktail_path(@conn, :delete, cocktail), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Cocktail", to: Routes.cocktail_path(@conn, :new) %></span>
