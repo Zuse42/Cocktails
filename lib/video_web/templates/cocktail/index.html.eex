@@ -1,28 +1,19 @@
 <h1>Listing Cocktails</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Recipe</th>
-
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="cocktail-container">
 <%= for cocktail <- @cocktails do %>
-    <tr>
-      <td><%= cocktail.name %></td>
-      <td><%= cocktail.recipe %></td>
 
-      <td>
-        <span><%= link "Show", to: Routes.cocktail_path(@conn, :show, cocktail) %></span>
-        <span><%= link "Edit", to: Routes.cocktail_path(@conn, :edit, cocktail) %></span>
-        <span><%= link "Delete", to: Routes.cocktail_path(@conn, :delete, cocktail), method: :delete, data: [confirm: "Are you sure?"] %></span>
-      </td>
-    </tr>
+    <div class="card custom-card " style="width: 18rem;">
+        <img src="<%= Routes.static_path(@conn, "/images/" <> "test_2.jpg") %>" class="card-img-top" alt="Some cocktail image">
+        <div class="card-body">
+            <h5 class="card-title"><%= cocktail.name %></h5>
+            <p class="card-text"><%= cocktail.recipe %></p>
+            <a ><%= link "Show", to: Routes.cocktail_path(@conn, :show, cocktail), class: "btn btn-primary" %></a>
+            <a><%= link "Edit", to: Routes.cocktail_path(@conn, :edit, cocktail), class: "btn btn-primary" %></a>
+            <a><%= link "Delete", to: Routes.cocktail_path(@conn, :delete, cocktail), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-primary" %></a>
+        </div>
+    </div>
 <% end %>
-  </tbody>
-</table>
+</div>
+<span><%= link "Add new Cocktail", to: Routes.cocktail_path(@conn, :new),  class: "btn btn-primary"%></span>
 
-<span><%= link "New Cocktail", to: Routes.cocktail_path(@conn, :new) %></span>

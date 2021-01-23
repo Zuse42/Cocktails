@@ -4,7 +4,7 @@ defmodule Video.Repo.Migrations.CreateCocktails do
   def change do
     create table(:cocktails) do
       add :name, :string
-      add :image, :binary
+      add :image, :string
       add :recipe, :text
 
       timestamps()

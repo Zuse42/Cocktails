@@ -10,6 +10,11 @@
   <%= error_tag f, :name %>
 
 
+  <%= label f, :image %>
+  <%= text_input f, :image %>
+  <%= error_tag f, :image %>
+
+
   <%= label f, :recipe %>
   <%= textarea f, :recipe %>
   <%= error_tag f, :recipe %>

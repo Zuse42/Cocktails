@@ -33,3 +33,6 @@ liveSocket.connect()
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket
 
+
+import 'bootstrap'; //Bootstrap support!
+

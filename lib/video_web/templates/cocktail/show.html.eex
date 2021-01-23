@@ -6,6 +6,10 @@
     <strong>Name:</strong>
     <%= @cocktail.name %>
   </li>
+    
+    <li>
+        <img src="<%= Routes.static_path(@conn, "/images/" <> @cocktail.image) %>"/>
+    </li>
 
   <li>
     <strong>Recipe:</strong>

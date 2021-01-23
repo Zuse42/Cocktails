@@ -1,0 +1,9 @@
+.cocktail-container {
+   display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.custom-card {
+    margin: 4px 4px 4px 4px;
+}
