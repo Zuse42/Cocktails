@@ -1,5 +1,12 @@
-<h1>Listing Cocktails</h1>
 
+<h1>Listing Cocktails</h1>
+<select id="picker" name="selector" class="form-select" multiple data-selected-text-format="values" >
+    <option id="el1"value="1">Item 1</option>
+    <option id="el2" value="2">Item 2</option>
+    <option id="el3" value="3">Item 3</option>
+    <option id="el4" value="4">Item 4</option>
+    <option id="el5" value="5">Item 5</option>
+</select>
 <div class="cocktail-container">
 <%= for cocktail <- @cocktails do %>
 
@@ -16,4 +23,5 @@
 <% end %>
 </div>
 <span><%= link "Add new Cocktail", to: Routes.cocktail_path(@conn, :new),  class: "btn btn-primary"%></span>
+
 
