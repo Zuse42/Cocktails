@@ -6,6 +6,7 @@ defmodule Video.Cocktailbar.Cocktail do
     field :image, :binary
     field :name, :string
     field :recipe, :string
+    has_many :ingridients, Video.Cocktailbar.Ingredient
 
     timestamps()
   end
