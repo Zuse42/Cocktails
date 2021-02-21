@@ -6,7 +6,7 @@ defmodule Video.Cocktailbar.Ingredient do
     field :amount, :float
     field :unit, :string
     field :substance_id, :id
-    belongs_to :substances, Video.Cocktailbar.Substance
+    belongs_to :substances, Video.Pantry.Substance
     belongs_to :cocktails, Video.Cocktailbar.Cocktail
 
     timestamps()

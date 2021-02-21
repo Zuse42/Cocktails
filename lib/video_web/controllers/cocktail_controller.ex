@@ -11,7 +11,9 @@ defmodule VideoWeb.CocktailController do
 
   def new(conn, _params) do
     changeset = Cocktailbar.change_cocktail(%Cocktail{})
-    render(conn, "new.html", changeset: changeset)
+    substances = Video.Pantry.list_substances()
+    IO.inspect substances
+    render(conn, "new.html", changeset: changeset, substances: substances)
   end
 
   def create(conn, %{"cocktail" => cocktail_params}) do

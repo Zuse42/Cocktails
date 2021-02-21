@@ -1,0 +1,13 @@
+<h1>Show Substance</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @substance.name %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.substance_path(@conn, :edit, @substance) %></span>
+<span><%= link "Back", to: Routes.substance_path(@conn, :index) %></span>

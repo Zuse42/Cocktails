@@ -3,3 +3,10 @@
 <%= render "form.html", Map.put(assigns, :action, Routes.cocktail_path(@conn, :create)) %>
 
 <span><%= link "Back", to: Routes.cocktail_path(@conn, :index) %></span>
+
+<div>
+    <span><%= link "New Substance", to: Routes.substance_path(@conn, :new) %></span>
+</div>
+
+
+

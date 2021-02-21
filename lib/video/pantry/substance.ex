@@ -1,10 +1,11 @@
-defmodule Video.Cocktailbar.Substance do
+defmodule Video.Pantry.Substance do
   use Ecto.Schema
   import Ecto.Changeset
 
   schema "substances" do
     field :name, :string
     has_many :ingridients, Video.Cocktailbar.Ingredient
+
 
     timestamps()
   end

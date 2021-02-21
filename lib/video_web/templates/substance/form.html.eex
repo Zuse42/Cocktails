@@ -9,20 +9,7 @@
   <%= text_input f, :name %>
   <%= error_tag f, :name %>
 
-  <%= label f, :image %>
-  <%= text_input f, :image %>
-  <%= error_tag f, :image %>
-
-  <%= label f, :ingredient %>
-  <%= select f, :ingredient, Enum.map(@substances, fn substance -> substance.name end) %>
-  <%= error_tag f, :ingredient %>
-
-  <%= label f, :recipe %>
-  <%= textarea f, :recipe %>
-  <%= error_tag f, :recipe %>
-
   <div>
     <%= submit "Save" %>
   </div>
-
 <% end %>

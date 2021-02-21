@@ -1,0 +1,26 @@
+<h1>Listing Substances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for substance <- @substances do %>
+    <tr>
+      <td><%= substance.name %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.substance_path(@conn, :show, substance) %></span>
+        <span><%= link "Edit", to: Routes.substance_path(@conn, :edit, substance) %></span>
+        <span><%= link "Delete", to: Routes.substance_path(@conn, :delete, substance), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Substance", to: Routes.substance_path(@conn, :new) %></span>
